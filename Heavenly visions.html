@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heavenly Visions Church</title>
+
+    <style>
+        body {
+            background: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: #4a76ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            display: none;
+            padding: 20px 40px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .hero {
+            padding: 50px;
+            text-align: center;
+            background: #eef2ff;
+        }
+
+        .church-img {
+            display: block;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #4a76ff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            showPage("home"); // default page
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Heavenly Visions Church</h1>
+        <nav>
+            <a onclick="showPage('home')">Home</a>
+            <a onclick="showPage('details')">Details</a>
+            <a onclick="showPage('about')">About Us</a>
+        </nav>
+    </header>
+
+    <!-- HOME PAGE -->
+    <section class="page" id="home">
+        <div class="hero">
+            <h2>Welcome to Heavenly Visions</h2>
+            <p>A place of worship, love, and spiritual transformation.</p>
+
+            <!-- CHURCH IMAGE HERE -->
+            <img src="https://images.unsplash.com/photo-1595590424479-5d7b984efe06?auto=format&fit=crop&w=1100&q=80"
+                 alt="Church Building"
+                 class="church-img">
+        </div>
+
+        <div>
+            <h3>Our Mission</h3>
+            <p>To spread the love of Christ, build strong families, and empower believers
+            to live purposeful lives through the Word of God.</p>
+        </div>
+    </section>
+
+    <!-- DETAILS PAGE -->
+    <section class="page" id="details">
+        <h2>Service Details</h2>
+        <ul>
+            <li><strong>Sunday Service:</strong> 10:00 AM</li>
+            <li><strong>Bible Study:</strong> Wednesday 6:00 PM</li>
+            <li><strong>Youth Fellowship:</strong> Friday 5:00 PM</li>
+        </ul>
+
+        <h3>Contact Us</h3>
+        <p><strong>Phone:</strong> +(256)709340878</p>
+        <p><strong>Email:</strong> info@heavenlyvisions.org</p>
+    </section>
+
+    <!-- ABOUT US PAGE -->
+    <section class="page" id="about">
+        <h2>About Heavenly Visions</h2>
+        <p>Heavenly Visions is a community of believers dedicated to spiritual growth,
+        worship, and service. Our ministry focuses on faith, unity, and outreach.</p>
+
+        <h3>Our Location</h3>
+        <p>123 Faith Avenue, Entebbe, UGANDA</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Heavenly Visions Church</p>
+    </footer>
+
+</body>
+</html>
